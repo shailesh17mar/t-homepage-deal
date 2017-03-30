@@ -1,0 +1,136 @@
+<dom-module id="t-homepage-deal-styles">
+  <style is="custom-style" >
+.flipper {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+  height:100%;
+  width:100%;
+}
+
+.back-content{
+  padding: 15px;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+
+  background: #f8f8f8;
+}
+
+.front .name {
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+:host{
+  background:var(--t-deal-bg, #fff);
+}
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+  .flip-container.flipped .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+  .tile{
+    position:relative;
+    width: 100%;
+    height: 100%;
+  }
+  .sub-heading{
+    font-size: 12px;
+  }
+  .caption{
+    padding: 15px;
+    color: var(--t-deal-caption-color,#fff);
+    background: var(--t-deal-caption-bg,rgba(54, 65, 67, 0.7));
+    max-height:90px;
+    z-index:2;
+  }
+  .heading{
+    text-transform:uppercase;
+  }
+
+  .description{
+    overflow: hidden;
+		text-overflow: ellipsis;
+  }
+  .container{
+    margin:0 auto;
+    padding: 0 12px;
+    max-width:var(--t-deal-max-width,1040px);
+  }
+  .header{
+    text-align:center;
+  }
+  .gridContainer{
+    width: 100%;
+  }
+  iron-pages{
+    padding: 20px 0;
+    background: var(--t-deal-content-bg,#fff);
+  }
+
+  .tabs{
+    background-color: #fff;
+    color: var(--t-deal-tab-color,#999999);
+    border-bottom:#d1d1d1 1px solid;
+    text-transform: uppercase;
+    --paper-tabs-selection-bar:{
+      border-bottom: 2px solid var(--t-deal-selected-bar-color,#4eaf52);
+    };
+  }
+  .selected-tab{
+    /* background: var(--t-footer-selected-tab-bg, #465363); */
+    color: var(--t-deal-selected-tab-color, #4eaf52);
+  }
+
+  .image{
+    width:100%;
+    height:100%;
+    position:absolute;
+  }
+  .tabs-container{
+    width: 720px;
+  }
+  </style>
+</dom-module>
+
