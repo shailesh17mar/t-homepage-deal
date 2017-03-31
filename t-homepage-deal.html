@@ -16,15 +16,15 @@
   `t-homepage-deal`
   Home page deal
 
-  @demo demo/index.html 
+  @demo demo/index.html
 -->
 )
 <dom-module id="t-homepage-deal">
   <template>
     <style is="custom-style" include="t-homepage-deal-styles iron-flex iron-flex-alignment"></style>
 
-    <iron-media-query query="(max-width: 1024px) and (min-width: 600px)" query-matches="{{_isTablet}}"></iron-media-query>
-    <iron-media-query query="(min-width : 320px) and (max-width : 640px)" query-matches="{{_isMobile}}"></iron-media-query>
+    <iron-media-query on-iron-resize="_reset" query="(max-width: 1024px) and (min-width: 600px)" query-matches="{{_isTablet}}"></iron-media-query>
+    <iron-media-query on-iron-resize="_reset" query="(min-width : 320px) and (max-width : 640px)" query-matches="{{_isMobile}}"></iron-media-query>
     <div class="flex header"><h1 class="main-heading">[[heading]]</h1></div>
     <div id="dealContainer" class="flex container">
       <div class="tab-container">
@@ -54,10 +54,11 @@
                   </div>
                   <div class="back  layout vertical">
                     <div class="back-content flex vertical layout">
-                      <!-- <div class="heading">[[item.heading]]</div> -->
-                      <!-- <div class="sub&#45;heading">[[item.subHeading]]</div> -->
-                      <div class="description flex">[[_getEllipsedDescription(item.description, item.type)]]</div>
-                      <div><paper-button data-url$="[[item.url]]" on-tap="_redirect" raised >[[item.button]]</paper-button></div>
+                      <div class="heading">[[item.heading]]</div>
+                      <div class="sub-heading">[[item.subHeading]]</div>
+                      <div class="description">[[_getEllipsedDescription(item.description, item.type)]]</div>
+                      <div class="price flex">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
+                      <a href="[[item.url]]">[[item.button]]</a>
                     </div>
                   </div>
                 </div>
@@ -73,6 +74,14 @@
 Polymer({
   is: 't-homepage-deal',
 
+  behaviors: [
+    Polymer.IronResizableBehavior
+  ],
+
+  listeners: {
+    'iron-resize': '_screenChanged'
+  },
+
   properties: {
     _lastBox:{
       type: Number,
@@ -85,17 +94,15 @@ Polymer({
     _isMobile:{
       type: Boolean,
       notify:true,
-      // observer: '_screenChanged'
     },
     _isTablet:{
       type: Boolean,
       notify:true,
-      // observer: '_screenChanged'
     },
     heading:{
       type: String
     },
-    data:{ 
+    data:{
       type: Array,
       notify: true
     },
@@ -132,7 +139,7 @@ Polymer({
     setTimeout(function(){
       $(".gridContainer").nested({
         resizeToFit: true,
-        resizeToFitOptions: { 
+        resizeToFitOptions: {
           resizeAny: true
         },
         minWidth: component._getBoxSize(),
@@ -147,7 +154,7 @@ Polymer({
     });
     $(".gridContainer").nested({
       resizeToFit: true,
-      resizeToFitOptions: { 
+      resizeToFitOptions: {
         resizeAny: true
       },
       minWidth: this._getBoxSize(),
@@ -187,6 +194,21 @@ Polymer({
     window.location = url;
     e.stopPropagation();
     return;
+  },
+
+  _screenChanged: function(){
+    this.querySelectorAll('.flipped').forEach(function(ele){
+      ele.classList.remove('flipped');
+    });
+    $(".gridContainer").nested({
+      resizeToFit: true,
+      resizeToFitOptions: {
+        resizeAny: true
+      },
+      minWidth: this._getBoxSize(),
+      gutter:4
+    });
+
   }
 
 });
