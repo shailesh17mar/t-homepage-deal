@@ -13,12 +13,34 @@
 <script src="./nested/jquery.nested.js"></script>
 
 <!--
-  `t-homepage-deal`
-  Home page deal
+	`t-homepage-deal`
+	travelnxt Masonry style Photo grid
+	fully responsive photo grid
 
-  @demo demo/index.html
+  It requires Jquery 1.7.1 and above
+
+### styling
+
+`<t-homepage-deal>` provides the following custom properties and mixins
+for styling:
+
+custom property | description | default
+----------------|-------------|----------
+`--t-deal-back-color` | Text color of back of the images| `#fff`
+`--t-deal-back-bg` | background color Back side| `#03a9f5`
+`--t-deal-bg` | Background color of deals section| `#fff`
+`--t-deal-caption-bg` | Caption background color rgba| `rgba(54, 65, 67, 0.7)`
+`--t-deal-caption-color` | Text color of caption | `#fff`
+`--t-deal-tab-color` | Text color of tabs | `#999999`
+`--t-deal-selected-bar-color` | Color of selected tab ink bar| `#4eaf52`
+`--t-deal-selected-tab-color` | Text color of the selected tab | `#4eaf52`
+
+	@group travelnxt elements
+	@element t-homepage-deal
+	@demo demo/index.html
+
 -->
-)
+
 <dom-module id="t-homepage-deal">
   <template>
     <style is="custom-style" include="t-homepage-deal-styles iron-flex iron-flex-alignment"></style>
@@ -83,25 +105,34 @@ Polymer({
   },
 
   properties: {
-    _lastBox:{
-      type: Number,
-      value: -1
-    },
-    minWidth: {
+    _minWidth: {
       type: Number,
       value: 240
     },
+		/** returns true if the device is mobile*/
     _isMobile:{
       type: Boolean,
       notify:true,
     },
+		/** returns true if the device is tablet*/
     _isTablet:{
       type: Boolean,
       notify:true,
     },
+    /**
+		 * Describes Main heading of the photo grid
+		 *
+		 * @type {String}
+		 */
     heading:{
       type: String
     },
+
+    /**
+		 * Describes Photo Grid array configuration
+		 *
+		 * @type {{heading: String, subHeading: String, imageSize: ['cover', 'contain'], type: Number, description: String, button: String, priceText: String, priceValue: String, image: Url}}
+		 */
     data:{
       type: Array,
       notify: true
@@ -125,13 +156,6 @@ Polymer({
     if(this._isMobile)
       return "flip-container box size11";
     return "flip-container box size" + type;
-  },
-
-  getLayout: function(){
-    if(this.isTablet || this.isMobile)
-      return "vertical";
-    else
-      return "horizontal";
   },
 
   attached: function(){
