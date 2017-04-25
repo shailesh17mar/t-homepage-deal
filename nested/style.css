@@ -1,4 +1,4 @@
-.box { 	background-color:#ff4499;
+.box { 	background-color:#ccc;
 
  
 -webkit-transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000); 
@@ -20,7 +20,7 @@
 #container { background: red;}
 
 .size21, .size22, .size23, .twocols { background: #ccc }
-.size31, .size32, .size33, .threecols { background: #ff9999 }
+.size31, .size32, .size33, .threecols { background: #ccc }
 
 a.btn {
   margin-right: 1px;
