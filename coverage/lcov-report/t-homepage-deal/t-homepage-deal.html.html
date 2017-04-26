@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for t-homepage-deal/t-homepage-deal.html</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">t-homepage-deal/t-homepage-deal.html</span></h1>
+    <h2>
+        Statements: <span class="metric">87.1% <small>(27 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">80% <small>(16 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(10 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">87.1% <small>(27 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">t-homepage-deal/</a> &#187; t-homepage-deal.html</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">320</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">320</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">960</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">640</span>
+<span class="cline-any cline-yes">600</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;link rel="import" href="../polymer/polymer.html"&gt;
+&lt;link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html"&gt;
+&lt;link rel="import" href="../iron-media-query/iron-media-query.html"&gt;
+&lt;link rel="import" href="../paper-tabs/paper-tabs.html"&gt;
+&lt;link rel="import" href="../iron-pages/iron-pages.html"&gt;
+&lt;link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html"&gt;
+&lt;link rel="import" href="../iron-image/iron-image.html"&gt;
+&lt;link rel="import" href="../paper-spinner/paper-spinner.html"&gt;
+&lt;link rel="import" href="../paper-button/paper-button.html"&gt;
+&lt;link rel="import" href="../paper-tabs/paper-tab.html"&gt;
+&lt;link rel="import" href="./t-homepage-deal-styles.html"&gt;
+&lt;script src="./nested/js/jquery-1.7.1.min.js"&gt;&lt;/script&gt;
+&lt;link href="./nested/style.css" rel="stylesheet"&gt;
+&lt;script src="./nested/makeboxes.js"&gt;&lt;/script&gt;
+&lt;script src="./nested/jquery.nested.js"&gt;&lt;/script&gt;
+&nbsp;
+&lt;!--
+  `t-homepage-deal`
+  travelnxt Masonry style Photo grid
+  fully responsive photo grid
+&nbsp;
+  It requires Jquery 1.7.1 and above
+&nbsp;
+  ### styling
+&nbsp;
+  `&lt;t-homepage-deal&gt;` provides the following custom properties and mixins
+  for styling:
+&nbsp;
+  custom property | description | default
+  ----------------|-------------|----------
+  `--t-deal-back-color` | Text color of back of the images| `#fff`
+  `--t-deal-back-bg` | background color Back side| `#03a9f5`
+  `--t-deal-bg` | Background color of deals section| `#fff`
+  `--t-deal-caption-bg` | Caption background color rgba| `rgba(54, 65, 67, 0.7)`
+  `--t-deal-caption-color` | Text color of caption | `#fff`
+  `--t-deal-tab-color` | Text color of tabs | `#999999`
+  `--t-deal-selected-bar-color` | Color of selected tab ink bar| `#4eaf52`
+  `--t-deal-selected-tab-color` | Text color of the selected tab | `#4eaf52`
+&nbsp;
+  @group travelnxt elements
+  @element t-homepage-deal
+  @demo demo/index.html
+&nbsp;
+--&gt;
+&nbsp;
+&lt;dom-module id="t-homepage-deal"&gt;
+  &lt;template&gt;
+    &lt;style is="custom-style" include="t-homepage-deal-styles iron-flex iron-flex-alignment"&gt;&lt;/style&gt;
+    &lt;iron-media-query query="(min-width : 320px) and (max-width : 767px)" query-matches="{{_isMobile}}"&gt;&lt;/iron-media-query&gt;
+    &lt;iron-media-query query="(max-width: 1024px) and (min-width: 768px)" query-matches="{{_isTablet}}"&gt;&lt;/iron-media-query&gt;
+    &lt;div class="flex header"&gt;&lt;h1 class="main-heading"&gt;[[heading]]&lt;/h1&gt;&lt;/div&gt;
+    &lt;div id="dealContainer" class="flex container"&gt;
+      &lt;div class="tab-container"&gt;
+        &lt;paper-tabs id="tabs" selected-class="selected-tab" on-iron-select="_tabChanged" fit-container class="tabs" scrollable selected="{{selected}}" &gt;
+          &lt;template is="dom-repeat" items="[[data]]" &gt;
+            &lt;paper-tab&gt;[[item.category]]&lt;/paper-tab&gt;
+          &lt;/template&gt;
+        &lt;/paper-tabs&gt;
+      &lt;/div&gt;
+&nbsp;
+      &lt;iron-pages class="flex " selected="[[selected]]"&gt;
+        &lt;template is="dom-repeat" items="[[data]]" as="category"&gt;
+          &lt;div class="gridContainer"&gt;
+            &lt;template is="dom-repeat" items="[[category.deals]]"&gt;
+              &lt;div class$="[[_getBoxType(item.type)]]" on-click="_flip"&gt;
+                &lt;div class="flipper"&gt;
+                  &lt;div class="front tile vertical layout"&gt;
+                    &lt;!-- &lt;paper&amp;#45;spinner active="[[loading]]" /&gt; --&gt;
+                    &lt;iron-image alt="[[index]]" loading="{{loading}}" class="image" sizing="[[_getSizing(item.imageSize)]]" src="[[item.image]]"&gt;&lt;/iron-image&gt;
+                    &lt;div class="flex"&gt;&lt;/div&gt;
+                    &lt;div class="caption horizontal layout"&gt;
+                      &lt;div class=" content flex vertical layout"&gt;
+                        &lt;div class="heading"&gt;[[item.heading]]&lt;/div&gt;
+                        &lt;div class="sub-heading"&gt;[[item.subHeading]]&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="price content"&gt;[[_getCaptionValue(item.priceText, item.priceValue)]]&lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class="back  layout vertical"&gt;
+                    &lt;div class="back-content flex vertical layout"&gt;
+                      &lt;div class="heading"&gt;[[item.heading]]&lt;/div&gt;
+                      &lt;div class="sub-heading"&gt;[[item.subHeading]]&lt;/div&gt;
+                      &lt;div class="description"&gt;[[_getEllipsedDescription(item.description, item.type)]]&lt;/div&gt;
+                      &lt;div class="price flex"&gt;[[_getCaptionValue(item.priceText, item.priceValue)]]&lt;/div&gt;
+                      &lt;a class="action-button" href="[[item.url]]"&gt;[[item.button]]&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/template&gt;
+          &lt;/div&gt;
+        &lt;/template&gt;
+      &lt;/iron-pages&gt;
+&nbsp;
+    &lt;/div&gt;
+  &lt;/template&gt;
+  &lt;script&gt;
+Polymer({
+  is: 't-homepage-deal',
+&nbsp;
+  behaviors: [
+    Polymer.IronResizableBehavior
+  ],
+&nbsp;
+  listeners: {
+    'iron-resize': '_screenChanged'
+  },
+&nbsp;
+  properties: {
+    _minWidth: {
+      type: Number,
+      value: 240
+    },
+    /** returns true if the device is mobile*/
+    _isMobile:{
+      type: Boolean,
+      notify:true,
+    },
+    /** returns true if the device is tablet*/
+    _isTablet:{
+      type: Boolean,
+      notify:true,
+    },
+    /**
+     * Describes Main heading of the photo grid
+     *
+     * @type {String}
+     */
+    heading:{
+      type: String
+    },
+&nbsp;
+    /**
+     * Describes Photo Grid array configuration
+     *
+     * @type {{heading: String, subHeading: String, imageSize: ['cover', 'contain'], type: Number, description: String, button: String, priceText: String, priceValue: String, image: Url}}
+     */
+    data:{
+      type: Array,
+      notify: true
+    },
+    selected:{
+      type: Number,
+      value: 0,
+      notify:true
+    }
+  },
+&nbsp;
+  _getBoxSize: function(){
+    if(this._isMobile)
+      return window.innerWidth - 40;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this._isTablet)
+<span class="cstat-no" title="statement not covered" >      return window.innerWidth/2 - 22;</span>
+    return 256;
+  },
+&nbsp;
+  _getBoxType: function(type){
+    if(this._isMobile)
+      return "flip-container box size11";
+    return "flip-container box size" + type;
+  },
+&nbsp;
+  attached: function(){
+    var component = this;
+    setTimeout(function(){
+      $(".gridContainer").nested({
+        resizeToFit: true,
+        resizeToFitOptions: {
+          resizeAny: true
+        },
+        minWidth: component._getBoxSize(),
+        gutter:4
+      });
+    },0);
+  },
+&nbsp;
+  _tabChanged: function(item){
+    var flippedTile= this.querySelector('.flipped');
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(flippedTile)
+<span class="cstat-no" title="statement not covered" >      flippedTile.classList.remove('flipped');</span>
+    $(".gridContainer").nested({
+      resizeToFit: true,
+      resizeToFitOptions: {
+        resizeAny: true
+      },
+      minWidth: this._getBoxSize(),
+      gutter:4
+    });
+  },
+&nbsp;
+  _flip: function(e){
+    var flippedTile= this.querySelector('.flipped');
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(flippedTile)
+<span class="cstat-no" title="statement not covered" >      flippedTile.classList.remove('flipped');</span>
+    e.currentTarget.classList.toggle('flipped');
+  },
+&nbsp;
+  _getSizing: function(sizing){
+    return sizing || 'contain';
+  },
+&nbsp;
+  _getCaptionValue: function(priceText, priceValue){
+    return priceText + ' ' + priceValue;
+  },
+&nbsp;
+  _getEllipsedDescription: function(description, type){
+    if(this._isMobile || type === 11){
+      return description.substr(0,140) + '...';
+    }
+    else if(type === 22){
+      return description.substr(0,500) + '...';
+    }
+    else
+      return description.substr(0,300) + '...';
+  },
+&nbsp;
+  _screenChanged: function(){
+    var flippedTile= this.querySelector('.flipped');
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(flippedTile)
+<span class="cstat-no" title="statement not covered" >      flippedTile.classList.remove('flipped');</span>
+    $(".gridContainer").nested({
+      resizeToFit: true,
+      resizeToFitOptions: {
+        resizeAny: true
+      },
+      minWidth: this._getBoxSize(),
+      gutter:4
+    });
+&nbsp;
+  }
+});
+  &lt;/script&gt;
+&lt;/dom-module&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 26 2017 18:27:03 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

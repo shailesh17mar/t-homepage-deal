@@ -3,6 +3,7 @@
 <link rel="import" href="../iron-media-query/iron-media-query.html">
 <link rel="import" href="../paper-tabs/paper-tabs.html">
 <link rel="import" href="../iron-pages/iron-pages.html">
+<link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html">
 <link rel="import" href="../iron-image/iron-image.html">
 <link rel="import" href="../paper-spinner/paper-spinner.html">
 <link rel="import" href="../paper-button/paper-button.html">
@@ -45,9 +46,8 @@
 <dom-module id="t-homepage-deal">
   <template>
     <style is="custom-style" include="t-homepage-deal-styles iron-flex iron-flex-alignment"></style>
-
-    <iron-media-query query="(max-width: 1024px) and (min-width: 600px)" query-matches="{{_isTablet}}"></iron-media-query>
-    <iron-media-query query="(min-width : 320px) and (max-width : 640px)" query-matches="{{_isMobile}}"></iron-media-query>
+    <iron-media-query query="(min-width : 320px) and (max-width : 767px)" query-matches="{{_isMobile}}"></iron-media-query>
+    <iron-media-query query="(max-width: 1024px) and (min-width: 768px)" query-matches="{{_isTablet}}"></iron-media-query>
     <div class="flex header"><h1 class="main-heading">[[heading]]</h1></div>
     <div id="dealContainer" class="flex container">
       <div class="tab-container">
@@ -98,6 +98,10 @@
 Polymer({
   is: 't-homepage-deal',
 
+  behaviors: [
+    Polymer.IronResizableBehavior
+  ],
+
   listeners: {
     'iron-resize': '_screenChanged'
   },
@@ -143,9 +147,9 @@ Polymer({
   },
 
   _getBoxSize: function(){
-    if(window.innerWidth <= 568)
+    if(this._isMobile)
       return window.innerWidth - 40;
-    if(window.innerWidth <= 1024)
+    if(this._isTablet)
       return window.innerWidth/2 - 22;
     return 256;
   },
@@ -171,9 +175,9 @@ Polymer({
   },
 
   _tabChanged: function(item){
-    this.querySelectorAll('.flipped').forEach(function(ele){
-      ele.classList.remove('flipped');
-    });
+    var flippedTile= this.querySelector('.flipped');
+    if(flippedTile)
+      flippedTile.classList.remove('flipped');
     $(".gridContainer").nested({
       resizeToFit: true,
       resizeToFitOptions: {
@@ -185,6 +189,9 @@ Polymer({
   },
 
   _flip: function(e){
+    var flippedTile= this.querySelector('.flipped');
+    if(flippedTile)
+      flippedTile.classList.remove('flipped');
     e.currentTarget.classList.toggle('flipped');
   },
 
@@ -207,17 +214,10 @@ Polymer({
       return description.substr(0,300) + '...';
   },
 
-  _redirect: function(e){
-    var url = e.currentTarget.getAttribute('data-url');
-    window.location = url;
-    e.stopPropagation();
-    return;
-  },
-
   _screenChanged: function(){
-    this.querySelectorAll('.flipped').forEach(function(ele){
-      ele.classList.remove('flipped');
-    });
+    var flippedTile= this.querySelector('.flipped');
+    if(flippedTile)
+      flippedTile.classList.remove('flipped');
     $(".gridContainer").nested({
       resizeToFit: true,
       resizeToFitOptions: {
@@ -228,7 +228,6 @@ Polymer({
     });
 
   }
-
 });
   </script>
 </dom-module>
