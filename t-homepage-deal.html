@@ -104,6 +104,7 @@ Polymer({
 
   listeners: {
     'iron-resize': '_screenChanged'
+    // 't-deal-section-select': '_sectionChanged'
   },
 
   properties: {
@@ -226,8 +227,12 @@ Polymer({
       minWidth: this._getBoxSize(),
       gutter:4
     });
+  },
 
-  }
+  // _sectionChanged: function(e, detail){
+  //   this.set('data.selectedIndex', detail.index);
+  // }
+  //
 });
   </script>
 </dom-module>
