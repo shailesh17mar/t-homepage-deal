@@ -63,9 +63,9 @@
           <div class="gridContainer">
             <template is="dom-repeat" items="[[category.deals]]">
               <div class$="[[_getBoxType(item.type)]]" on-click="_flip">
-                <div class="flipper">
-                  <div class="front tile vertical layout">
                     <!-- <paper&#45;spinner active="[[loading]]" /> -->
+                <div class="panel">
+                  <div class="front tile vertical layout">
                     <iron-image alt="[[index]]" loading="{{loading}}" class="image" sizing="[[_getSizing(item.imageSize)]]" src="[[item.image]]"></iron-image>
                     <div class="flex"></div>
                     <div class="caption horizontal layout">
@@ -73,7 +73,7 @@
                         <div class="heading">[[item.heading]]</div>
                         <div class="sub-heading">[[item.subHeading]]</div>
                       </div>
-                      <div class="price content">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
+                      <div class="content">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
                     </div>
                   </div>
                   <div class="back  layout vertical">
@@ -191,9 +191,9 @@ Polymer({
 
   _flip: function(e){
     var flippedTile= this.querySelector('.flipped');
-    if(flippedTile)
+    if(flippedTile && !e.currentTarget.querySelector('.flipped'))
       flippedTile.classList.remove('flipped');
-    e.currentTarget.classList.toggle('flipped');
+    e.currentTarget.querySelector('.panel').classList.toggle('flipped');
   },
 
   _getSizing: function(sizing){
