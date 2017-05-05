@@ -40,7 +40,6 @@
   @group travelnxt elements
   @element t-homepage-deal
   @demo demo/index.html
-
 -->
 
 <dom-module id="t-homepage-deal">
@@ -67,172 +66,174 @@
                 <div class="panel">
                   <div class="front tile vertical layout">
                     <iron-image alt="[[index]]" loading="{{loading}}" class="image" sizing="[[_getSizing(item.imageSize)]]" src="[[item.image]]"></iron-image>
-                    <div class="flex"></div>
-                    <div class="caption horizontal layout">
-                      <div class=" content flex vertical layout">
-                        <div class="heading">[[item.heading]]</div>
-                        <div class="sub-heading">[[item.subHeading]]</div>
-                      </div>
-                      <div class="content">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
-                    </div>
-                  </div>
-                  <div class="back  layout vertical">
-                    <div class="back-content flex vertical layout">
-                      <div class="heading">[[item.heading]]</div>
-                      <div class="sub-heading">[[item.subHeading]]</div>
-                      <div class="description">[[_getEllipsedDescription(item.description, item.type)]]</div>
-                      <div class="price flex">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
-                      <a class="action-button" href="[[item.url]]">[[item.button]]</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-        </template>
-      </iron-pages>
+										<div class="flex"></div>
+										<div class="caption horizontal layout">
+											<div class="padded horizontal layout flex">
+												<div class=" content flex ">
+													<div class="heading">[[item.heading]]</div>
+													<div class="sub-heading">[[item.subHeading]]</div>
+												</div>
+												<div class="content">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
+											</div>
+										</div>
+									</div>
+									<div class="back  layout vertical">
+										<div class="back-content flex vertical layout">
+											<div class="heading">[[item.heading]]</div>
+											<div class="sub-heading">[[item.subHeading]]</div>
+											<div class="description">[[_getEllipsedDescription(item.description, item.type)]]</div>
+											<div class="price flex">[[_getCaptionValue(item.priceText, item.priceValue)]]</div>
+											<a class="action-button" href="[[item.url]]">[[item.button]]</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+				</template>
+			</iron-pages>
 
-    </div>
-  </template>
-  <script>
+		</div>
+	</template>
+	<script>
 Polymer({
-  is: 't-homepage-deal',
+	is: 't-homepage-deal',
 
-  behaviors: [
-    Polymer.IronResizableBehavior
-  ],
+	behaviors: [
+		Polymer.IronResizableBehavior
+	],
 
-  listeners: {
-    'iron-resize': '_screenChanged'
-    // 't-deal-section-select': '_sectionChanged'
-  },
+	listeners: {
+		'iron-resize': '_screenChanged'
+			// 't-deal-section-select': '_sectionChanged'
+	},
 
-  properties: {
-    _minWidth: {
-      type: Number,
-      value: 240
-    },
-    /** returns true if the device is mobile*/
-    _isMobile:{
-      type: Boolean,
-      notify:true,
-    },
-    /** returns true if the device is tablet*/
-    _isTablet:{
-      type: Boolean,
-      notify:true,
-    },
-    /**
-     * Describes Main heading of the photo grid
-     *
-     * @type {String}
-     */
-    heading:{
-      type: String
-    },
+	properties: {
+		_minWidth: {
+			type: Number,
+			value: 240
+		},
+		/** returns true if the device is mobile*/
+		_isMobile:{
+			type: Boolean,
+			notify:true,
+		},
+		/** returns true if the device is tablet*/
+		_isTablet:{
+			type: Boolean,
+			notify:true,
+		},
+		/**
+		 * Describes Main heading of the photo grid
+		 *
+		 * @type {String}
+		 */
+		heading:{
+			type: String
+		},
 
-    /**
-     * Describes Photo Grid array configuration
-     *
-     * @type {{heading: String, subHeading: String, imageSize: ['cover', 'contain'], type: Number, description: String, button: String, priceText: String, priceValue: String, image: Url}}
-     */
-    data:{
-      type: Array,
-      notify: true
-    },
-    selected:{
-      type: Number,
-      value: 0,
-      notify:true
-    }
-  },
+		/**
+		 * Describes Photo Grid array configuration
+		 *
+		 * @type {{heading: String, subHeading: String, imageSize: ['cover', 'contain'], type: Number, description: String, button: String, priceText: String, priceValue: String, image: Url}}
+		 */
+		data:{
+			type: Array,
+			notify: true
+		},
+		selected:{
+			type: Number,
+			value: 0,
+			notify:true
+		}
+	},
 
-  _getBoxSize: function(){
-    if(this._isMobile)
-      return window.innerWidth - 40;
-    if(this._isTablet)
-      return window.innerWidth/2 - 22;
-    return 256;
-  },
+	_getBoxSize: function(){
+		if(this._isMobile)
+			return window.innerWidth - 40;
+		if(this._isTablet)
+			return window.innerWidth/2 - 22;
+		return 256;
+	},
 
-  _getBoxType: function(type){
-    if(this._isMobile)
-      return "flip-container box size11";
-    return "flip-container box size" + type;
-  },
+	_getBoxType: function(type){
+		if(this._isMobile)
+			return "flip-container box size11";
+		return "flip-container box size" + type;
+	},
 
-  attached: function(){
-    var component = this;
-    setTimeout(function(){
-      $(".gridContainer").nested({
-        resizeToFit: true,
-        resizeToFitOptions: {
-          resizeAny: true
-        },
-        minWidth: component._getBoxSize(),
-        gutter:4
-      });
-    },0);
-  },
+	attached: function(){
+		var component = this;
+		setTimeout(function(){
+			$(".gridContainer").nested({
+				resizeToFit: true,
+				resizeToFitOptions: {
+					resizeAny: true
+				},
+				minWidth: component._getBoxSize(),
+				gutter:4
+			});
+		},0);
+	},
 
-  _tabChanged: function(item){
-    var flippedTile= this.querySelector('.flipped');
-    if(flippedTile)
-      flippedTile.classList.remove('flipped');
-    $(".gridContainer").nested({
-      resizeToFit: true,
-      resizeToFitOptions: {
-        resizeAny: true
-      },
-      minWidth: this._getBoxSize(),
-      gutter:4
-    });
-  },
+	_tabChanged: function(item){
+		var flippedTile= this.querySelector('.flipped');
+		if(flippedTile)
+			flippedTile.classList.remove('flipped');
+		$(".gridContainer").nested({
+			resizeToFit: true,
+			resizeToFitOptions: {
+				resizeAny: true
+			},
+			minWidth: this._getBoxSize(),
+			gutter:4
+		});
+	},
 
-  _flip: function(e){
-    var flippedTile= this.querySelector('.flipped');
-    if(flippedTile && !e.currentTarget.querySelector('.flipped'))
-      flippedTile.classList.remove('flipped');
-    e.currentTarget.querySelector('.panel').classList.toggle('flipped');
-  },
+	_flip: function(e){
+		var flippedTile= this.querySelector('.flipped');
+		if(flippedTile && !e.currentTarget.querySelector('.flipped'))
+			flippedTile.classList.remove('flipped');
+		e.currentTarget.querySelector('.panel').classList.toggle('flipped');
+	},
 
-  _getSizing: function(sizing){
-    return sizing || 'contain';
-  },
+	_getSizing: function(sizing){
+		return sizing || 'contain';
+	},
 
-  _getCaptionValue: function(priceText, priceValue){
-    return priceText + ' ' + priceValue;
-  },
+	_getCaptionValue: function(priceText, priceValue){
+		return priceText + ' ' + priceValue;
+	},
 
-  _getEllipsedDescription: function(description, type){
-    if(this._isMobile || type === 11){
-      return description.substr(0,140) + '...';
-    }
-    else if(type === 22){
-      return description.substr(0,500) + '...';
-    }
-    else
-      return description.substr(0,300) + '...';
-  },
+	_getEllipsedDescription: function(description, type){
+		if(this._isMobile || type === 11){
+			return description.substr(0,140) + '...';
+		}
+		else if(type === 22){
+			return description.substr(0,500) + '...';
+		}
+		else
+			return description.substr(0,300) + '...';
+	},
 
-  _screenChanged: function(){
-    var flippedTile= this.querySelector('.flipped');
-    if(flippedTile)
-      flippedTile.classList.remove('flipped');
-    $(".gridContainer").nested({
-      resizeToFit: true,
-      resizeToFitOptions: {
-        resizeAny: true
-      },
-      minWidth: this._getBoxSize(),
-      gutter:4
-    });
-  },
+	_screenChanged: function(){
+		var flippedTile= this.querySelector('.flipped');
+		if(flippedTile)
+			flippedTile.classList.remove('flipped');
+		$(".gridContainer").nested({
+			resizeToFit: true,
+			resizeToFitOptions: {
+				resizeAny: true
+			},
+			minWidth: this._getBoxSize(),
+			gutter:4
+		});
+	},
 
-  // _sectionChanged: function(e, detail){
-  //   this.set('data.selectedIndex', detail.index);
-  // }
-  //
+	// _sectionChanged: function(e, detail){
+	//   this.set('data.selectedIndex', detail.index);
+	// }
+	//
 });
-  </script>
+	</script>
 </dom-module>
