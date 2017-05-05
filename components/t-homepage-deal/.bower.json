@@ -1,0 +1,35 @@
+{
+  "name": "t-homepage-deal",
+  "description": "Home page deal",
+  "main": "t-homepage-deal.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "salvattore": "https://github.com/rnmp/salvattore.git#^1.0.9",
+    "dry-stone-layout": "CaptainCodeman/dry-stone-layout#^0.0.4",
+    "paper-tabs": "PolymerElements/paper-tabs",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.8",
+    "iron-media-query": "PolymerElements/iron-media-query",
+    "iron-image": "PolymerElements/iron-image#^1.2.5",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.4",
+    "paper-button": "PolymerElements/paper-button#^1.0.14",
+    "paper-spinner": "PolymerElements/paper-spinner#^1.2.1",
+    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.6"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "t2ym/web-component-tester#wct6-plugin",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/shailesh17mar/t-homepage-deal",
+  "_release": "ea4eac4152",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ea4eac4152e4218eab1f3647df7f396a93a06c8b"
+  },
+  "_source": "https://github.com/shailesh17mar/t-homepage-deal.git",
+  "_target": "master",
+  "_originalSource": "shailesh17mar/t-homepage-deal",
+  "_direct": true
+}
