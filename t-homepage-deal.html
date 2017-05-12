@@ -207,13 +207,13 @@ Polymer({
 
 	_getEllipsedDescription: function(description, type){
 		if(this._isMobile || type === 11){
-			return description.substr(0,140) + '...';
+      return (description.length > 140)? description.substr(0,140) + '...': description;
 		}
 		else if(type === 22){
-			return description.substr(0,500) + '...';
+			return (description.length > 500)?description.substr(0,500) + '...': description;
 		}
 		else
-			return description.substr(0,300) + '...';
+			return (description.length > 300)?description.substr(0,300) + '...': description;
 	},
 
 	_screenChanged: function(){
