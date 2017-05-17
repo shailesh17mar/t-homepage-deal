@@ -545,7 +545,8 @@
       flush(function(){
         var firstDeal = element.querySelector('.flip-container');
         firstDeal.click();
-        assert.equal(firstDeal.classList.contains('flipped'), true);
+        debugger;
+        assert.equal(firstDeal.querySelector('.panel').classList.contains('flipped'), true);
         done();
       });
     });
